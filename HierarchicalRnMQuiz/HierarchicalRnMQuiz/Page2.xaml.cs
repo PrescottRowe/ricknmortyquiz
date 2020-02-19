@@ -12,13 +12,17 @@ namespace HierarchicalRnMQuiz
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page2 : ContentPage
     {
-        public Page2()
+        int Character, temp = 0;
+        CheckBox lastChecked;
+        public Page2(int Character)
         {
             InitializeComponent();
+            this.Character = Character;
         }
         async void GoToNextPage(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Page3());
+            Character += temp;
+            await Navigation.PushAsync(new Page3(this.Character));
         }
         async void GoToPreviousPage(object sender, EventArgs e)
         {
@@ -30,23 +34,46 @@ namespace HierarchicalRnMQuiz
         }
         void OnCheckBoxCheckedChanged1(object sender, CheckedChangedEventArgs e)
         {
-            Console.WriteLine("1");
+            CheckBox activeCheckBox = sender as CheckBox;
+            if (activeCheckBox != lastChecked && lastChecked != null) lastChecked.IsChecked = false;
+            lastChecked = activeCheckBox.IsChecked ? activeCheckBox : null;
+            temp = 1;
         }
         void OnCheckBoxCheckedChanged2(object sender, CheckedChangedEventArgs e)
         {
-            Console.WriteLine("2");
+            CheckBox activeCheckBox = sender as CheckBox;
+            if (activeCheckBox != lastChecked && lastChecked != null) lastChecked.IsChecked = false;
+            lastChecked = activeCheckBox.IsChecked ? activeCheckBox : null;
+            temp = 2;
         }
         void OnCheckBoxCheckedChanged3(object sender, CheckedChangedEventArgs e)
         {
-            Console.WriteLine("3");
+            CheckBox activeCheckBox = sender as CheckBox;
+            if (activeCheckBox != lastChecked && lastChecked != null) lastChecked.IsChecked = false;
+            lastChecked = activeCheckBox.IsChecked ? activeCheckBox : null;
+            temp = 3;
         }
         void OnCheckBoxCheckedChanged4(object sender, CheckedChangedEventArgs e)
         {
-            Console.WriteLine("4");
+            CheckBox activeCheckBox = sender as CheckBox;
+            if (activeCheckBox != lastChecked && lastChecked != null) lastChecked.IsChecked = false;
+            lastChecked = activeCheckBox.IsChecked ? activeCheckBox : null;
+            temp = 4;
         }
         void OnCheckBoxCheckedChanged5(object sender, CheckedChangedEventArgs e)
         {
-            Console.WriteLine("5");
+            CheckBox activeCheckBox = sender as CheckBox;
+            if (activeCheckBox != lastChecked && lastChecked != null) lastChecked.IsChecked = false;
+            lastChecked = activeCheckBox.IsChecked ? activeCheckBox : null;
+            temp = 5;
+        }
+        protected override void OnAppearing()
+        {
+            MainLabel.Text = "Im Mr Meseeks, what can I do for you?";
+        }
+        protected override void OnDisappearing()
+        {
+            cb1.IsChecked = cb2.IsChecked = cb3.IsChecked = cb4.IsChecked = cb5.IsChecked = false; //This prevents integer overflow. Otherwise repeated page traversals with previously checkedboxes would continue adding when going forward.   
         }
     }
 }

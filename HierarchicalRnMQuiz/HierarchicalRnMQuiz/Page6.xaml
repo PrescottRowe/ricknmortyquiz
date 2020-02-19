@@ -6,13 +6,13 @@
              mc:Ignorable="d"
              x:Class="HierarchicalRnMQuiz.Page6"
              Title="Your Character"
-             BackgroundImageSource="butterbot.png">
+             x:Name="CharacterImage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Your life has a single purpose. Pass the butter." FontSize="Title"  FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="20"/>
+            <Label x:Name="MainLabel" FontSize="Title"  FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="20"/>
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Padding="20" >
-                <Button Text="Quit" Clicked="GoToMainPage" />
+                <Button Text="Quit" Clicked="GoToMainPage" BackgroundColor="Aqua"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

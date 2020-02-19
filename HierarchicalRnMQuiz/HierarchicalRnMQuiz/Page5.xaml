@@ -6,29 +6,29 @@
              mc:Ignorable="d"
              x:Class="HierarchicalRnMQuiz.Page5"
              Title="Question 5 of 5"
-             BackgroundImageSource="br5">
+             BackgroundImageSource="br2">
     <ContentPage.Content>
         <StackLayout Padding="20">
-            <Label Text="Your favorite drink?"  TextColor="WhiteSmoke" FontSize="Title" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="20"/>
+            <Label x:Name="MainLabel"  TextColor="WhiteSmoke" FontSize="Title" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="20"/>
             <StackLayout VerticalOptions="FillAndExpand">
                 <StackLayout Orientation="Horizontal">
-                    <CheckBox CheckedChanged="OnCheckBoxCheckedChanged1"/>
+                    <CheckBox x:Name="cb1" CheckedChanged="OnCheckBoxCheckedChanged1"/>
                     <Label Text="The blood of my enimies" TextColor="WhiteSmoke" FontSize="Body" BackgroundColor="Black"  FontAttributes="Bold" VerticalOptions="Center"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <CheckBox CheckedChanged="OnCheckBoxCheckedChanged2"/>
+                    <CheckBox x:Name="cb2" CheckedChanged="OnCheckBoxCheckedChanged2"/>
                     <Label Text="Morty tears" TextColor="WhiteSmoke" FontSize="Body" BackgroundColor="Black"  FontAttributes="Bold" VerticalOptions="Center"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <CheckBox CheckedChanged="OnCheckBoxCheckedChanged3"/>
+                    <CheckBox x:Name="cb3" CheckedChanged="OnCheckBoxCheckedChanged3"/>
                     <Label Text="Mega seed juice" TextColor="WhiteSmoke" FontSize="Body" BackgroundColor="Black"  FontAttributes="Bold" VerticalOptions="Center"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <CheckBox CheckedChanged="OnCheckBoxCheckedChanged4"/>
+                    <CheckBox x:Name="cb4" CheckedChanged="OnCheckBoxCheckedChanged4"/>
                     <Label Text="Miniverse in a bottle" TextColor="WhiteSmoke" FontSize="Body" BackgroundColor="Black"  FontAttributes="Bold" VerticalOptions="Center"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <CheckBox CheckedChanged="OnCheckBoxCheckedChanged5"/>
+                    <CheckBox x:Name="cb5" CheckedChanged="OnCheckBoxCheckedChanged5"/>
                     <Label Text="Eye-hole milk" FontSize="Body" BackgroundColor="Black"  FontAttributes="Bold" TextColor="WhiteSmoke" VerticalOptions="Center"/>
                 </StackLayout>
             </StackLayout>

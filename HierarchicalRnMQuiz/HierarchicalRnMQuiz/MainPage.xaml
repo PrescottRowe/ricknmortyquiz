@@ -14,7 +14,7 @@
             <Label/>
             <Label/>
             <Label/>
-            <Label Text="What Rick and Morty Character are you? Also don't sue me, that would make you a Jerry." FontSize="Body" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Padding="30" TextColor="White"/>
+            <Label x:Name="MainLabel" FontSize="Body" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="End" Padding="30" TextColor="White"/>
             <StackLayout VerticalOptions="FillAndExpand">
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  VerticalOptions="End" >

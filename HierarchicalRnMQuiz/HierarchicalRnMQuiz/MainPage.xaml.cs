@@ -21,5 +21,9 @@ namespace HierarchicalRnMQuiz
         {
             await Navigation.PushAsync(new Page1());
         }
+        protected override void OnAppearing()
+        {
+            MainLabel.Text = "What Rick and Morty Character are you? Also don't sue me, that would make you a Jerry.";
+        }
     }
 }
