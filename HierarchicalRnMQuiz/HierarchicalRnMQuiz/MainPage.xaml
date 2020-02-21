@@ -18,7 +18,11 @@
             <StackLayout VerticalOptions="FillAndExpand">
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  VerticalOptions="End" >
-                <Button Text="Go To Quiz" Clicked="GoToNextPage" HorizontalOptions="Center" WidthRequest="200" Padding="20" BackgroundColor="Aqua" BorderColor="WhiteSmoke" BorderWidth="3"/>
+                <Button Text="Q1" Clicked="GoToPage1" HorizontalOptions="Center" WidthRequest="50" Padding="10" BackgroundColor="Aqua" BorderColor="WhiteSmoke" BorderWidth="3"/>
+                <Button Text="Q2" Clicked="GoToPage2" HorizontalOptions="Center" WidthRequest="50" Padding="10" BackgroundColor="Aqua" BorderColor="WhiteSmoke" BorderWidth="3"/>
+                <Button Text="Q3" Clicked="GoToPage3" HorizontalOptions="Center" WidthRequest="50" Padding="10" BackgroundColor="Aqua" BorderColor="WhiteSmoke" BorderWidth="3"/>
+                <Button Text="Q4" Clicked="GoToPage4" HorizontalOptions="Center" WidthRequest="50" Padding="10" BackgroundColor="Aqua" BorderColor="WhiteSmoke" BorderWidth="3"/>
+                <Button Text="Q5" Clicked="GoToPage5" HorizontalOptions="Center" WidthRequest="50" Padding="10" BackgroundColor="Aqua" BorderColor="WhiteSmoke" BorderWidth="3"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

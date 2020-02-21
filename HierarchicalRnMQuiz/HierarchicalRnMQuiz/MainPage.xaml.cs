@@ -17,9 +17,25 @@ namespace HierarchicalRnMQuiz
         {
             InitializeComponent();
         }
-        async void GoToNextPage(object sender, EventArgs e)
+        async void GoToPage1(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Page1());
+        }
+        async void GoToPage2(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page2(0));
+        }
+        async void GoToPage3(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page3(0));
+        }
+        async void GoToPage4(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page4(0));
+        }
+        async void GoToPage5(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Page5(0));      
         }
         protected override void OnAppearing()
         {
